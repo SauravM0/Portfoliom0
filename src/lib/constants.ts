@@ -1,3 +1,5 @@
+export const BASE_PATH = "/Portfoliom0";
+
 export const SITE = {
   name: "Saurav Madake",
   title: "Software Engineer | Full-Stack · Cloud · Linux & Systems",
@@ -30,7 +32,7 @@ export const HERO_CONTENT = {
   title: "Software Engineer | Full-Stack · Cloud · Linux & Systems",
   tagline: "Building AI-Powered, Production Grade Applications",
   email: "sauravmadake890@gmail.com",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: `${BASE_PATH}/resume.pdf`,
 } as const;
 
 export const ABOUT_CONTENT = {

@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { TechBackground } from "@/components/ui/TechBackground";
 import { useTypingAnimation } from "@/hooks/useTypingAnimation";
-import { SOCIAL_LINKS, HERO_CONTENT } from "@/lib/constants";
+import { BASE_PATH, SOCIAL_LINKS, HERO_CONTENT } from "@/lib/constants";
 
 const typingTexts = [
   "Building AI-Powered, Production Grade Applications",
@@ -272,7 +272,7 @@ function AvatarPhoto() {
       <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-[rgb(var(--theme-primary))] via-[rgb(var(--theme-secondary))] to-[rgb(var(--theme-accent))] opacity-60 transition-opacity duration-500 group-hover:opacity-90" />
       <div className="relative flex size-full items-center justify-center overflow-hidden rounded-full bg-[#0d0d14]">
         <Image
-          src="/og-image.jpg"
+              src={`${BASE_PATH}/og-image.jpg`}
           alt="Saurav Madake"
           fill
           className="object-cover"

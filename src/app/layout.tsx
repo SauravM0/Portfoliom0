@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { SITE } from "@/lib/constants";
+import { BASE_PATH, SITE } from "@/lib/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     images: [
       {
-        url: "/og-image.jpg",
+        url: `${BASE_PATH}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: `${SITE.name} — ${SITE.title}`,
@@ -52,14 +52,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.title}`,
     description: SITE.description,
-    images: ["/og-image.jpg"],
+    images: [`${BASE_PATH}/og-image.jpg`],
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: `${BASE_PATH}/favicon.svg`,
   },
 };
 
